@@ -26,11 +26,15 @@ Output: ```tests/test-data/output.txt```
 
 If any issues happened during running the test, paste the following snippet in 'lib/service/wikipedia-service.js' and run the program in command line
 
-```const path = require('path');
+```sh
+const path = require('path');
 let input = Utils.readInputFile(path.join(__dirname, '../../tests/test-data/input.txt'));
 Utils.initOutputFile(path.join(__dirname, '../../tests/test-data/output.txt'));
 Utils.clearFileContents();
 let wiki = new WikipediaService(input);
-wiki.findAnswers();```
+wiki.findAnswers();
+```
 
-```$ node lib/service/wikipedia-service.js```
+```sh
+$ node lib/service/wikipedia-service.js
+```
